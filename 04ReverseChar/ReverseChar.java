@@ -1,3 +1,5 @@
+import Java.util.*;
+
 public class ReverseChar implements CharSequence{
     private ReverseChar ogstring;
 
@@ -16,5 +18,7 @@ public class ReverseChar implements CharSequence{
     public CharSequence subSequence(int start, int end){
 	return ogstring.substring(start, end);
     }
+
+    public String ReverseChar(String 
 
 }
