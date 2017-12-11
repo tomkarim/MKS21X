@@ -41,6 +41,17 @@ public class Sorts {
     public static void bubbleSort(int[] data){
         for(int i = data.length - 1; i > 0; i--){
             boolean swapped = false;
+            for(int j = 0; j < 1; j++){
+                if(data[j] > data[j+1]){
+                    int position = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = current;
+                    swapped = true;
+                }
+            }
+            if(!swapped){
+                return;
+            }
         }
     }
 
