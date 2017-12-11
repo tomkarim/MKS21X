@@ -1,6 +1,6 @@
 public class Barcode implements Comparable<Barcode>{
     private String zip;
-    String[] codes = {"||:::",}
+    String[] codes = {"||:::",":::||","::|:|";"::||:",""}
 
     public Barcode(String zip){
         if(zip.length() != 5){
