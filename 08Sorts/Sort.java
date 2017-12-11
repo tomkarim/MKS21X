@@ -38,6 +38,12 @@ public class Sorts {
         }
     }
 
+    public static void bubbleSort(int[] data){
+        for(int i = data.length - 1; i > 0; i--){
+            boolean swapped = false;
+        }
+    }
+
 
 
 
