@@ -18,7 +18,7 @@ public class TemperatureWindow extends JFrame implements ActionListener{
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         pane = this.getContentPane();
-        pane.setLayoyt(new FlowLayout());
+        pane.setLayout(new FlowLayout());
 
         cf = new JButton("Make it Fahrenheit!");
         cf.addActionListener(this);
@@ -28,8 +28,8 @@ public class TemperatureWindow extends JFrame implements ActionListener{
         fc.setActionCommand("f2c");
         C = new JLabel("Celcius");
         F = new JLabel("Farenheit");
-        c = newJTextField(20);
-        f = newJTextField(20);
+        c = new JTextField(20);
+        f = new JTextField(20);
 
         pane.add(cf);
         pane.add(fc);
