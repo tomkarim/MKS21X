@@ -34,8 +34,8 @@ public class TemperatureWindow extends JFrame implements ActionListener{
         pane.add(cf);
         pane.add(fc);
         pane.add(C);
-        pane.add(F);
         pane.add(c);
+        pane.add(F);
         pane.add(f);
     }
 
