@@ -13,7 +13,7 @@ public class TemperatureWindow extends JFrame implements ActionListener{
 
     public TemperatureWindow() {
         this.setTitle("Fahrenheit/Celcius Temperature Converter");
-        this.setSize(1000, 800);
+        this.setSize(600, 400);
         this.setLocation(100, 100);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
