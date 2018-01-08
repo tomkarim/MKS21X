@@ -25,7 +25,7 @@ public class OrderedSuperArray extends SuperArray {
 
  private int findIndex (String value) {
    for (int i = 0; i < size(); i++) {
-       if (value.compareTo(get(index)) < 0)
+       if (value.compareTo(get(i)) < 0)
            return i;
    }
    return size();
@@ -53,11 +53,8 @@ public class OrderedSuperArray extends SuperArray {
  }
 
  public boolean add(String value) {
-   if (super.size == 0) {
-     super.add(value);
- } else {
-     int findIndex = findIndex(value);
-     super.add(findIndex, value);
+   super.add(findIndexBinary(value), value);
+   return true;
    }
  }
-}
+
