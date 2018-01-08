@@ -1,23 +1,29 @@
-import.java.util.*;
+import java.util.*;
 
 public class SuperArrayIterator implements Iterator<String>{
-    int index = 0;
-    SuperArray array;
+    private int current;
+    private SuperArray data;
 
     public SuperArrayIterator(SuperArray array){
-        this.array = array;
+        data = array;
+        current = 0;
     }
 
     public boolean hasNext(){
-        return index < array.size();
+        return current <= data.size();
     }
 
     public String next(){
         if(hasNext()){
-            return array.get(index++);
+            current++;
         }else{
-            throw new NoSuchElementException();
+            System.exit(0);
         }
+        return data.get(current - 1);
+    }
+
+    public void remove(){
+        throw new UnsupportedOperationException();
     }
 
 }

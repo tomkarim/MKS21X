@@ -1,4 +1,4 @@
-public class CirculatingBook extends LibraryBook {
+public class CirculatingBook extends LibraryBook{
     private String currentHolder, dueDate;
 
     public CirculatingBook(String author, String title, String ISBN, String callNumber) {
@@ -49,8 +49,3 @@ public class CirculatingBook extends LibraryBook {
 }
 
 
-
-
-
-
-}
