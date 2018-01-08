@@ -1,10 +1,10 @@
-import Java.util.*;
+import java.util.*;
 
-public class ReverseCharSequenceSequence implements CharSequence{
-    
+public class ReversedCharSequence implements CharSequence{
+
     private String data;
 
-    public ReverseCharSequence(CharSequence s) {
+    public ReversedCharSequence(String s) {
         data = "";
         for (int i = s.length() - 1; i >= 0; i--) {
             data += s.charAt(i);
