@@ -15,7 +15,7 @@ public class OrderedSuperArray extends SuperArray {
    }
  }
 
- public void set(int index, String value) {
+ public String set(int index, String value) {
   throw new UnsupportedOperationException("Use the string version of the add function!");
  }
 
