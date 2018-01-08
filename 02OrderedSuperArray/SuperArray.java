@@ -8,6 +8,11 @@ public class SuperArray{
 	size = 0;
     }
 
+    public SuperArray(int startingCapacity){
+        data = new String[startingCapacity];
+        size = 0;
+    }
+
     public void clear() {
         data = new String[10];
     	size = 0;

@@ -4,8 +4,8 @@ public class OrderedSuperArray extends SuperArray {
   super();
  }
 
- public OrderedSuperArray(int size) {
-  super(size);
+ public OrderedSuperArray(int startingCapacity) {
+  super(startingCapacity);
  }
 
  public OrderedSuperArray (String[] ary) {
@@ -37,7 +37,7 @@ public class OrderedSuperArray extends SuperArray {
      while(size() != 0 && end != start){
          if(get(start + ((end - start)/2)).compareTo(value) < 0){
              if(end - start > 1){
-                 start += ((end - start) / 2):
+                 start += ((end - start) / 2);
              } else{
                  start += 1;
              }
@@ -52,7 +52,7 @@ public class OrderedSuperArray extends SuperArray {
      return end;
  }
 
- public void add(String value) {
+ public boolean add(String value) {
    if (super.size == 0) {
      super.add(value);
  } else {
