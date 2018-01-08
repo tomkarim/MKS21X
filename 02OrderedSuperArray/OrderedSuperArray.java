@@ -8,34 +8,56 @@ public class OrderedSuperArray extends SuperArray {
   super(size);
  }
 
- public OrderedSuperArray (String[] data) {
-   super(data.length);
-   for (int i = 0; i < data.length; i++) {
-     add(data[i]);
+ public OrderedSuperArray (String[] ary) {
+   super(ary.length);
+   for (int i = 0; i < ary.length; i++) {
+     add(ary[i]);
    }
  }
 
- public void set(int index, String element) {
+ public void set(int index, String value) {
   throw new UnsupportedOperationException("Use the string version of the add function!");
  }
 
- public void add(int index, String element) {
-  add(element);
+ public void add(int index, String value) {
+  add(value);
  }
 
- private int location (String element) {
-   for (int i = 0; i < super.data.length; i++) {
-     if (i == super.size() - 1) return i;
-     if (super.data[i].compareTo(element) < 0) return i;
+ private int findIndex (String value) {
+   for (int i = 0; i < size(); i++) {
+       if (value.compareTo(get(index)) < 0)
+           return i;
    }
+   return size();
  }
 
- public void add(String element) {
+ private int findIndexBinary(String value){
+     int start = 0;
+     int end = size();
+     while(size() != 0 && end != start){
+         if(get(start + ((end - start)/2)).compareTo(value) < 0){
+             if(end - start > 1){
+                 start += ((end - start) / 2):
+             } else{
+                 start += 1;
+             }
+         } else{
+             if(end - start > 1) {
+                 end = end - ((end - start) / 2);
+             } else{
+                 end--;
+             }
+         }
+     }
+     return end;
+ }
+
+ public void add(String value) {
    if (super.size == 0) {
-     super.add(element);
+     super.add(value);
  } else {
-     int location = location(element);
-     super.add(location, element);
+     int findIndex = findIndex(value);
+     super.add(findIndex, value);
    }
  }
 }
